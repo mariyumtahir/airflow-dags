@@ -1,13 +1,13 @@
 from airflow import DAG
 from airflow.providers.standard.operators.python import PythonOperator 
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 def print_interval(**context):
 
     dag_run = context["dag_run"]
 
     start = dag_run.data_interval_start
-    end   = dag_run.data_interval_end
+    end = start + timedelta(hours=3)
 
     print("=== INTERVAL INFO ===")
     print(f"Interval Start:  {start}")
