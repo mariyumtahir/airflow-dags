@@ -4,8 +4,10 @@ from datetime import datetime, timezone
 
 def print_interval(**context):
 
-    start = context["data_interval_start"]
-    end   = context["data_interval_end"]
+    dag_run = context["dag_run"]
+
+    start = dag_run.data_interval_start
+    end   = dag_run.data_interval_end
 
     print("=== INTERVAL INFO ===")
     print(f"Interval Start:  {start}")
