@@ -1,22 +1,23 @@
 from airflow import DAG
-from airflow.providers.standard.operators.python import PythonOperator 
-from datetime import datetime, timezone, timedelta
+from airflow.providers.standard.operators.python import PythonOperator
+from croniter import croniter
+from datetime import datetime, timezone
 
 def print_interval(**context):
-
     dag_run = context["dag_run"]
+    dag = context["dag"]
 
     start = dag_run.data_interval_start
-    end = start + timedelta(hours=3)
+    schedule = dag.schedule  # e.g. "0 */3 * * *"
+
+    # Get the next scheduled time after start = our interval end
+    cron = croniter(schedule, start)
+    end = cron.get_next(datetime)
 
     print("=== INTERVAL INFO ===")
     print(f"Interval Start:  {start}")
     print(f"Interval End:    {end}")
     print(f"Duration:        {end - start}")
-
-    print("=== ALL AVAILABLE MACROS ===")
-    for key, value in context.items():
-        print(f"{key}: {value}")
 
 with DAG(
     dag_id="print_interval_dag",
