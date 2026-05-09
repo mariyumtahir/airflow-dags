@@ -1,0 +1,15 @@
+id,name,age,department,salary,working_hours
+1,Alice,60,Engineering,75654.42,57.7
+2,Grace,50,Sales,66354.26,21.4
+3,Grace,51,HR,75943.02,51.2
+4,Eve,27,HR,56785.33,55.5
+5,Eve,47,Marketing,87876.2,59.5
+6,Frank,37,Sales,108864.12,28.5
+7,Bob,29,Engineering,78760.74,53.7
+8,Eve,27,Marketing,34610.47,21.6
+9,Eve,33,Engineering,34941.44,34.8
+10,Grace,55,Sales,72291.63,30.2
+11,Jack,33,Sales,59631.68,33.1
+12,Eve,55,Finance,90181.74,29.6
+13,Charlie,30,Marketing,84168.73,58.3
+14,Jack,41,Engineering,35194.14,35.3

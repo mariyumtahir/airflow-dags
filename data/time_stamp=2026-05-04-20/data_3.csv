@@ -1,0 +1,11 @@
+id,name,age,department,salary,working_hours
+1,Hank,27,Finance,43109.36,45.9
+2,Hank,48,Finance,37255.12,55.8
+3,Charlie,55,Sales,66601.71,21.3
+4,Grace,36,HR,47544.5,47.0
+5,Ivy,30,HR,46517.84,27.1
+6,Ivy,34,HR,88856.87,37.8
+7,Bob,29,Engineering,64618.41,26.9
+8,Grace,49,HR,109162.76,49.1
+9,Hank,55,Operations,67346.96,42.5
+10,Hank,52,Engineering,44029.93,40.3
