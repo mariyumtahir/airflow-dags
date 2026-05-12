@@ -1,0 +1,13 @@
+{"timestamp":"2026-05-05T10:59:04.413558Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-05T10:59:04.416385Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/print_interval_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-05T10:59:04.430190Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"UserWarning","filename":"/opt/airflow/dags/print_interval_dag.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-05-05T10:59:04.508506Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:59:04.511872Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:59:04.512751Z","level":"info","event":"Current task name:print_interval","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:59:04.514640Z","level":"info","event":"Dag name:print_interval_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:59:04.516099Z","level":"info","event":"Interval Start: 2026-04-19 21:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:59:04.518365Z","level":"info","event":"Interval End:   2026-04-19 21:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:59:04.513490Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-05T10:59:04.568643Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:59:04.569841Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:59:04.570984Z","level":"info","event":"Task operator:<Task(PythonOperator): print_interval>","logger":"task.stdout"}

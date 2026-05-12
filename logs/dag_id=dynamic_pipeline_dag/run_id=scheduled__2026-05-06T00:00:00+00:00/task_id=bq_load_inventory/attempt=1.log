@@ -1,0 +1,64 @@
+{"timestamp":"2026-05-06T10:22:28.040616Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T10:22:28.043510Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T10:22:30.102611Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"UserWarning","filename":"/opt/airflow/dags/dynamic_dag_pipeline.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-05-06T10:22:30.246359Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.247163Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.247929Z","level":"info","event":"Current task name:bq_load_inventory","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.249398Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.298342Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1325,"error_detail":[{"exc_type":"AirflowNotFoundException","exc_value":"The conn_id `google_cloud_default` isn't defined","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1263,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1678,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/bases/operator.py","lineno":443,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/providers/google/cloud/operators/bigquery.py","lineno":2404,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/providers/google/cloud/hooks/bigquery.py","lineno":173,"name":"__init__"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/providers/google/common/hooks/base_google.py","lineno":283,"name":"__init__"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/bases/hook.py","lineno":61,"name":"get_connection"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/definitions/connection.py","lineno":250,"name":"get"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/context.py","lineno":177,"name":"_get_connection"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-05-06T10:22:30.372225Z","level":"warning","event":"No XCom value found; defaulting to None.","key":"bigquery_table","dag_id":"dynamic_pipeline_dag","task_id":"bq_load_inventory","run_id":"scheduled__2026-05-06T00:00:00+00:00","map_index":-1,"logger":"task","filename":"xcom.py","lineno":264}
+{"timestamp":"2026-05-06T10:22:30.415872Z","level":"warning","event":"No XCom value found; defaulting to None.","key":"bigquery_table","dag_id":"dynamic_pipeline_dag","task_id":"bq_load_inventory","run_id":"scheduled__2026-05-06T00:00:00+00:00","map_index":-1,"logger":"task","filename":"xcom.py","lineno":264}
+{"timestamp":"2026-05-06T10:22:30.496802Z","level":"warning","event":"No XCom value found; defaulting to None.","key":"bigquery_job_detail","dag_id":"dynamic_pipeline_dag","task_id":"bq_load_inventory","run_id":"scheduled__2026-05-06T00:00:00+00:00","map_index":-1,"logger":"task","filename":"xcom.py","lineno":264}
+{"timestamp":"2026-05-06T10:22:30.527837Z","level":"warning","event":"No XCom value found; defaulting to None.","key":"bigquery_job_detail","dag_id":"dynamic_pipeline_dag","task_id":"bq_load_inventory","run_id":"scheduled__2026-05-06T00:00:00+00:00","map_index":-1,"logger":"task","filename":"xcom.py","lineno":264}
+{"timestamp":"2026-05-06T10:22:30.562078Z","level":"info","event":"Task instance in failure state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.562562Z","level":"info","event":"Task start","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.562875Z","level":"info","event":"Task:<Task(BigQueryInsertJobOperator): bq_load_inventory>","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.564650Z","level":"info","event":"Failure caused by The conn_id `google_cloud_default` isn't defined","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.031534Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T10:37:30.033854Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T10:37:30.132096Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.132886Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.133600Z","level":"info","event":"Current task name:bq_load_inventory","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.134367Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.137854Z","level":"info","event":"Loading data to BigQuery: processed.inventory_summary","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.138738Z","level":"info","event":"Query:","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.142014Z","level":"info","event":"            SELECT * FROM `raw.inventory_data`","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.142707Z","level":"info","event":"            WHERE snapshot_date = '{{ ds }}'","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.143209Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.143765Z","level":"info","event":"Load complete: inventory → processed.inventory_summary","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.139178Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T10:37:30.241016Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.241955Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.242754Z","level":"info","event":"Task operator:<Task(PythonOperator): bq_load_inventory>","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:04.948490Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T10:41:04.949946Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T10:41:05.056818Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.057464Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.058070Z","level":"info","event":"Current task name:bq_load_inventory","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.058523Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.060238Z","level":"info","event":"Loading data to BigQuery: processed.inventory_summary","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.061163Z","level":"info","event":"Query:","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.061611Z","level":"info","event":"            SELECT * FROM `raw.inventory_data`","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.062248Z","level":"info","event":"            WHERE snapshot_date = '{{ ds }}'","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.062742Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.063541Z","level":"info","event":"Load complete: inventory → processed.inventory_summary","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.060185Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T10:41:05.181324Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.181895Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.185519Z","level":"info","event":"Task operator:<Task(PythonOperator): bq_load_inventory>","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.493639Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T11:36:53.496095Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T11:36:53.630137Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.630894Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.631859Z","level":"info","event":"Current task name:bq_load_inventory","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.634386Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.635182Z","level":"info","event":"Loading data to BigQuery: processed.inventory_summary","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.636363Z","level":"info","event":"Query:","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.637669Z","level":"info","event":"            SELECT * FROM `raw.inventory_data`","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.638270Z","level":"info","event":"            WHERE snapshot_date = '{{ ds }}'","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.638725Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.639130Z","level":"info","event":"Load complete: inventory → processed.inventory_summary","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.634256Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T11:36:53.738603Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.739399Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.743589Z","level":"info","event":"Task operator:<Task(PythonOperator): bq_load_inventory>","logger":"task.stdout"}

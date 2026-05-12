@@ -1,0 +1,14 @@
+{"timestamp":"2026-05-11T07:55:36.279897Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-11T07:55:36.282948Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/__pycache__/dagtask.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-11T07:55:36.888959Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"UserWarning","filename":"/opt/airflow/dags/__pycache__/dagtask.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-05-11T07:55:38.145173Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:38.152617Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:38.157314Z","level":"info","event":"Current task name:process_quetta","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:38.159945Z","level":"info","event":"Dag name:dynamic_city_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:38.160538Z","level":"info","event":"Processing city: QUETTA","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:38.164023Z","level":"info","event":"  → Fetching weather data for quetta...","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:38.172123Z","level":"info","event":"  → Done with quetta!","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:38.173272Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:38.173873Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:38.176581Z","level":"info","event":"Task operator:<Task(PythonOperator): process_quetta>","logger":"task.stdout"}
+{"timestamp":"2026-05-11T07:55:37.827957Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}

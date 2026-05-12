@@ -1,0 +1,53 @@
+{"timestamp":"2026-05-06T10:22:28.022888Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T10:22:28.024834Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T10:22:30.126241Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"UserWarning","filename":"/opt/airflow/dags/dynamic_dag_pipeline.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-05-06T10:22:30.216216Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.217690Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.218418Z","level":"info","event":"Current task name:transform_returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.219083Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.221199Z","level":"info","event":"Transforming data for: returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.223082Z","level":"info","event":"Applying business rules to: raw.returns_data","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.223685Z","level":"info","event":"Partitioning output by: return_date","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.221392Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T10:22:30.349030Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.349676Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:30.350559Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_returns>","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.057145Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T10:37:30.058980Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T10:37:30.193319Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.195209Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.195874Z","level":"info","event":"Current task name:transform_returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.196376Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.198312Z","level":"info","event":"Transforming data for: returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.198881Z","level":"info","event":"Applying business rules to: raw.returns_data","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.199288Z","level":"info","event":"Partitioning output by: return_date","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.198254Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T10:37:30.313653Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.314253Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:30.318495Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_returns>","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:04.920389Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T10:41:04.922196Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T10:41:05.029373Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.029858Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.031394Z","level":"info","event":"Current task name:transform_returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.032220Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.033702Z","level":"info","event":"Transforming data for: returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.034709Z","level":"info","event":"Applying business rules to: raw.returns_data","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.035064Z","level":"info","event":"Partitioning output by: return_date","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.034060Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T10:41:05.125142Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.126041Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:05.126537Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_returns>","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.526436Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T11:36:53.528979Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T11:36:53.659690Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.660397Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.661379Z","level":"info","event":"Current task name:transform_returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.662161Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.665264Z","level":"info","event":"Transforming data for: returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.666702Z","level":"info","event":"Applying business rules to: raw.returns_data","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.667874Z","level":"info","event":"Partitioning output by: return_date","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.664882Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T11:36:53.769995Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.771999Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:53.773963Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_returns>","logger":"task.stdout"}

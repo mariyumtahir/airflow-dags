@@ -1,0 +1,49 @@
+{"timestamp":"2026-05-06T10:22:18.550663Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T10:22:18.552551Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T10:22:25.655531Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"UserWarning","filename":"/opt/airflow/dags/dynamic_dag_pipeline.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-05-06T10:22:25.774071Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:25.774818Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:25.775749Z","level":"info","event":"Current task name:validate_returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:25.776393Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:25.777221Z","level":"info","event":"Validating source table: raw.returns_data","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:25.777690Z","level":"info","event":"Row count check passed for: returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:25.777244Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T10:22:25.964610Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:25.965261Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:22:25.965783Z","level":"info","event":"Task operator:<Task(PythonOperator): validate_returns>","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:27.007468Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T10:37:27.009260Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T10:37:27.185388Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:27.186098Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:27.186866Z","level":"info","event":"Current task name:validate_returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:27.187420Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:27.189430Z","level":"info","event":"Validating source table: raw.returns_data","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:27.189901Z","level":"info","event":"Row count check passed for: returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:27.189388Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T10:37:27.416313Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:27.416852Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:37:27.417427Z","level":"info","event":"Task operator:<Task(PythonOperator): validate_returns>","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:02.471593Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T10:41:02.473354Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T10:41:02.664511Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:02.666831Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:02.670510Z","level":"info","event":"Current task name:validate_returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:02.671921Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:02.673180Z","level":"info","event":"Validating source table: raw.returns_data","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:02.673824Z","level":"info","event":"Row count check passed for: returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:02.669573Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T10:41:02.825616Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:02.827048Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T10:41:02.828787Z","level":"info","event":"Task operator:<Task(PythonOperator): validate_returns>","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:50.594742Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-06T11:36:50.597567Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-06T11:36:50.813635Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:50.820618Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:50.828321Z","level":"info","event":"Current task name:validate_returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:50.835579Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:50.841950Z","level":"info","event":"Validating source table: raw.returns_data","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:50.850211Z","level":"info","event":"Row count check passed for: returns","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:50.820897Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-06T11:36:51.076303Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:51.078579Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-06T11:36:51.079107Z","level":"info","event":"Task operator:<Task(PythonOperator): validate_returns>","logger":"task.stdout"}

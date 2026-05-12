@@ -1,0 +1,14 @@
+{"timestamp":"2026-05-09T06:00:30.234253Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-09T06:00:30.244012Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/__pycache__/print_interval_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-09T06:00:30.413056Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.414019Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.414514Z","level":"info","event":"Current task name:print_interval","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.414905Z","level":"info","event":"Dag name:print_interval_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.423231Z","level":"info","event":"=== INTERVAL INFO ===","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.424638Z","level":"info","event":"Interval Start:  2026-05-09 06:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.425215Z","level":"info","event":"Interval End:    2026-05-09 09:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.425738Z","level":"info","event":"Duration:        3:00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.422658Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-09T06:00:30.732156Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.736881Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-09T06:00:30.742040Z","level":"info","event":"Task operator:<Task(PythonOperator): print_interval>","logger":"task.stdout"}

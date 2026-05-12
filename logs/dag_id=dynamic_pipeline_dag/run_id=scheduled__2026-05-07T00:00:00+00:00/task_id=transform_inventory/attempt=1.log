@@ -1,0 +1,13 @@
+{"timestamp":"2026-05-07T02:12:11.533327Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-07T02:12:11.538342Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-07T02:12:11.697020Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:11.698117Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:11.698618Z","level":"info","event":"Current task name:transform_inventory","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:11.702823Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:11.732002Z","level":"info","event":"Transforming data for: inventory","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:11.734226Z","level":"info","event":"Applying business rules to: raw.inventory_data","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:11.748439Z","level":"info","event":"Partitioning output by: snapshot_date","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:11.703204Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-07T02:12:11.933526Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:11.934338Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:11.945495Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_inventory>","logger":"task.stdout"}

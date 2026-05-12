@@ -1,0 +1,189 @@
+{"timestamp":"2026-05-08T17:37:27.681600Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-08T17:37:27.683487Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/csv_upsert_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-08T17:37:27.702142Z","level":"warning","event":"airflow.exceptions.AirflowSkipException is deprecated and will be removed in a future version. Use airflow.sdk.exceptions.AirflowSkipException instead.","category":"UserWarning","filename":"/opt/airflow/dags/csv_upsert_pipeline.py","lineno":7,"logger":"py.warnings"}
+{"timestamp":"2026-05-08T17:37:28.012678Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.014724Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.015588Z","level":"info","event":"Current task name:process_partition","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.018302Z","level":"info","event":"Dag name:csv_upsert_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.027993Z","level":"info","event":"[INFO] data_interval_start : 2026-05-01 04:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.059392Z","level":"info","event":"[INFO] data_interval_end   : 2026-05-01 04:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.061233Z","level":"info","event":"[INFO] Processing partition: /data/time_stamp=2026-05-01-04","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.077868Z","level":"info","event":"[INFO] Sorted files: ['data_1.csv', 'data_2.csv', 'data_3.csv', 'data_4.csv']","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.082526Z","level":"info","event":"[INFO] Read data_1.csv  (index=1)","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.085950Z","level":"info","event":"[INFO] Read data_2.csv  (index=2)","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.092189Z","level":"info","event":"[INFO] Read data_3.csv  (index=3)","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.093414Z","level":"info","event":"[INFO] Read data_4.csv  (index=4)","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.094645Z","level":"info","event":"[INFO] Resolved 20 unique IDs for this run:","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.095220Z","level":"info","event":"       id=1 → {'id': '1', 'name': 'Frank', 'age': '44', 'department': 'Engineering', 'salary': '76344.63', 'working_hours': '44.4'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.095900Z","level":"info","event":"       id=2 → {'id': '2', 'name': 'Jack', 'age': '25', 'department': 'HR', 'salary': '32754.62', 'working_hours': '26.8'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.096348Z","level":"info","event":"       id=3 → {'id': '3', 'name': 'Grace', 'age': '33', 'department': 'Operations', 'salary': '98928.69', 'working_hours': '59.7'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.097765Z","level":"info","event":"       id=4 → {'id': '4', 'name': 'Charlie', 'age': '29', 'department': 'HR', 'salary': '108000.27', 'working_hours': '26.5'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.101675Z","level":"info","event":"       id=5 → {'id': '5', 'name': 'Charlie', 'age': '60', 'department': 'Engineering', 'salary': '32832.81', 'working_hours': '28.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.107388Z","level":"info","event":"       id=6 → {'id': '6', 'name': 'Grace', 'age': '45', 'department': 'HR', 'salary': '39119.9', 'working_hours': '45.2'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.115470Z","level":"info","event":"       id=7 → {'id': '7', 'name': 'Jack', 'age': '47', 'department': 'Finance', 'salary': '44217.17', 'working_hours': '50.9'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.125946Z","level":"info","event":"       id=8 → {'id': '8', 'name': 'Ivy', 'age': '24', 'department': 'Engineering', 'salary': '71763.21', 'working_hours': '25.0'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.126530Z","level":"info","event":"       id=9 → {'id': '9', 'name': 'Hank', 'age': '60', 'department': 'Sales', 'salary': '90722.99', 'working_hours': '34.6'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.127865Z","level":"info","event":"       id=10 → {'id': '10', 'name': 'Diana', 'age': '39', 'department': 'Operations', 'salary': '87284.9', 'working_hours': '42.0'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.131536Z","level":"info","event":"       id=11 → {'id': '11', 'name': 'Grace', 'age': '30', 'department': 'Finance', 'salary': '34935.6', 'working_hours': '43.7'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.132507Z","level":"info","event":"       id=12 → {'id': '12', 'name': 'Jack', 'age': '22', 'department': 'Operations', 'salary': '30985.93', 'working_hours': '53.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.135654Z","level":"info","event":"       id=13 → {'id': '13', 'name': 'Hank', 'age': '44', 'department': 'HR', 'salary': '42675.15', 'working_hours': '59.8'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.136604Z","level":"info","event":"       id=14 → {'id': '14', 'name': 'Hank', 'age': '28', 'department': 'Marketing', 'salary': '109878.48', 'working_hours': '34.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.137591Z","level":"info","event":"       id=15 → {'id': '15', 'name': 'Diana', 'age': '23', 'department': 'Operations', 'salary': '60575.39', 'working_hours': '44.2'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.138493Z","level":"info","event":"       id=16 → {'id': '16', 'name': 'Hank', 'age': '25', 'department': 'Marketing', 'salary': '59289.03', 'working_hours': '21.5'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.139188Z","level":"info","event":"       id=17 → {'id': '17', 'name': 'Charlie', 'age': '30', 'department': 'HR', 'salary': '42340.51', 'working_hours': '27.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.139671Z","level":"info","event":"       id=18 → {'id': '18', 'name': 'Hank', 'age': '57', 'department': 'Sales', 'salary': '118911.5', 'working_hours': '53.9'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.144057Z","level":"info","event":"       id=19 → {'id': '19', 'name': 'Eve', 'age': '58', 'department': 'Engineering', 'salary': '100434.58', 'working_hours': '47.5'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.144982Z","level":"info","event":"       id=20 → {'id': '20', 'name': 'Hank', 'age': '55', 'department': 'Engineering', 'salary': '84460.43', 'working_hours': '26.2'}","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.146817Z","level":"info","event":"[INFO] result.csv mil gayi — upsert karte hain.","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.147903Z","level":"info","event":"[INFO] Existing result.csv mein 20 rows hain.","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.148510Z","level":"info","event":"       UPDATE  id=1","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.152176Z","level":"info","event":"       UPDATE  id=2","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.152892Z","level":"info","event":"       UPDATE  id=3","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.153445Z","level":"info","event":"       UPDATE  id=4","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.155567Z","level":"info","event":"       UPDATE  id=5","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.157327Z","level":"info","event":"       UPDATE  id=6","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.157945Z","level":"info","event":"       UPDATE  id=7","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.158700Z","level":"info","event":"       UPDATE  id=8","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.159537Z","level":"info","event":"       UPDATE  id=9","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.160272Z","level":"info","event":"       UPDATE  id=10","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.161734Z","level":"info","event":"       UPDATE  id=11","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.162371Z","level":"info","event":"       UPDATE  id=12","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.163192Z","level":"info","event":"       UPDATE  id=13","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.164044Z","level":"info","event":"       UPDATE  id=14","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.167452Z","level":"info","event":"       UPDATE  id=15","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.168999Z","level":"info","event":"       UPDATE  id=16","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.169944Z","level":"info","event":"       UPDATE  id=17","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.170530Z","level":"info","event":"       UPDATE  id=18","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.171152Z","level":"info","event":"       UPDATE  id=19","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.173715Z","level":"info","event":"       UPDATE  id=20","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.174791Z","level":"info","event":"[INFO] result.csv updated — total 20 rows.","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.126219Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-08T17:37:28.522141Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.524535Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-08T17:37:28.528329Z","level":"info","event":"Task operator:<Task(PythonOperator): process_partition>","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:29.682835Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-11T16:46:29.685438Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/__pycache__/csv_upsert_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-11T16:46:29.703975Z","level":"warning","event":"airflow.exceptions.AirflowSkipException is deprecated and will be removed in a future version. Use airflow.sdk.exceptions.AirflowSkipException instead.","category":"UserWarning","filename":"/opt/airflow/dags/__pycache__/csv_upsert_pipeline.py","lineno":7,"logger":"py.warnings"}
+{"timestamp":"2026-05-11T16:46:30.181751Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.182474Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.183196Z","level":"info","event":"Current task name:process_partition","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.183867Z","level":"info","event":"Dag name:csv_upsert_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.184602Z","level":"info","event":"[INFO] data_interval_start : 2026-05-01 04:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.185256Z","level":"info","event":"[INFO] data_interval_end   : 2026-05-01 04:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.187127Z","level":"info","event":"[INFO] Processing partition: /data/time_stamp=2026-05-01-04","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.190666Z","level":"info","event":"[INFO] Sorted files: ['data_1.csv', 'data_2.csv', 'data_3.csv', 'data_4.csv']","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.194591Z","level":"info","event":"[INFO] Read data_1.csv  (index=1)","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.198015Z","level":"info","event":"[INFO] Read data_2.csv  (index=2)","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.202321Z","level":"info","event":"[INFO] Read data_3.csv  (index=3)","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.206543Z","level":"info","event":"[INFO] Read data_4.csv  (index=4)","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.207137Z","level":"info","event":"[INFO] Resolved 20 unique IDs for this run:","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.209235Z","level":"info","event":"       id=1 → {'id': '1', 'name': 'Frank', 'age': '44', 'department': 'Engineering', 'salary': '76344.63', 'working_hours': '44.4'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.210195Z","level":"info","event":"       id=2 → {'id': '2', 'name': 'Jack', 'age': '25', 'department': 'HR', 'salary': '32754.62', 'working_hours': '26.8'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.211002Z","level":"info","event":"       id=3 → {'id': '3', 'name': 'Grace', 'age': '33', 'department': 'Operations', 'salary': '98928.69', 'working_hours': '59.7'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.211657Z","level":"info","event":"       id=4 → {'id': '4', 'name': 'Charlie', 'age': '29', 'department': 'HR', 'salary': '108000.27', 'working_hours': '26.5'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.213935Z","level":"info","event":"       id=5 → {'id': '5', 'name': 'Charlie', 'age': '60', 'department': 'Engineering', 'salary': '32832.81', 'working_hours': '28.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.217880Z","level":"info","event":"       id=6 → {'id': '6', 'name': 'Grace', 'age': '45', 'department': 'HR', 'salary': '39119.9', 'working_hours': '45.2'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.218602Z","level":"info","event":"       id=7 → {'id': '7', 'name': 'Jack', 'age': '47', 'department': 'Finance', 'salary': '44217.17', 'working_hours': '50.9'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.219485Z","level":"info","event":"       id=8 → {'id': '8', 'name': 'Ivy', 'age': '24', 'department': 'Engineering', 'salary': '71763.21', 'working_hours': '25.0'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.220310Z","level":"info","event":"       id=9 → {'id': '9', 'name': 'Hank', 'age': '60', 'department': 'Sales', 'salary': '90722.99', 'working_hours': '34.6'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.221238Z","level":"info","event":"       id=10 → {'id': '10', 'name': 'Diana', 'age': '39', 'department': 'Operations', 'salary': '87284.9', 'working_hours': '42.0'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.222465Z","level":"info","event":"       id=11 → {'id': '11', 'name': 'Grace', 'age': '30', 'department': 'Finance', 'salary': '34935.6', 'working_hours': '43.7'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.222979Z","level":"info","event":"       id=12 → {'id': '12', 'name': 'Jack', 'age': '22', 'department': 'Operations', 'salary': '30985.93', 'working_hours': '53.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.225752Z","level":"info","event":"       id=13 → {'id': '13', 'name': 'Hank', 'age': '44', 'department': 'HR', 'salary': '42675.15', 'working_hours': '59.8'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.226338Z","level":"info","event":"       id=14 → {'id': '14', 'name': 'Hank', 'age': '28', 'department': 'Marketing', 'salary': '109878.48', 'working_hours': '34.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.227064Z","level":"info","event":"       id=15 → {'id': '15', 'name': 'Diana', 'age': '23', 'department': 'Operations', 'salary': '60575.39', 'working_hours': '44.2'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.227846Z","level":"info","event":"       id=16 → {'id': '16', 'name': 'Hank', 'age': '25', 'department': 'Marketing', 'salary': '59289.03', 'working_hours': '21.5'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.230319Z","level":"info","event":"       id=17 → {'id': '17', 'name': 'Charlie', 'age': '30', 'department': 'HR', 'salary': '42340.51', 'working_hours': '27.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.232296Z","level":"info","event":"       id=18 → {'id': '18', 'name': 'Hank', 'age': '57', 'department': 'Sales', 'salary': '118911.5', 'working_hours': '53.9'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.233344Z","level":"info","event":"       id=19 → {'id': '19', 'name': 'Eve', 'age': '58', 'department': 'Engineering', 'salary': '100434.58', 'working_hours': '47.5'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.234497Z","level":"info","event":"       id=20 → {'id': '20', 'name': 'Hank', 'age': '55', 'department': 'Engineering', 'salary': '84460.43', 'working_hours': '26.2'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.235608Z","level":"info","event":"[INFO] result.csv found — upsert.","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.236668Z","level":"info","event":"[INFO] In existing result.csv 20 rows.","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.237258Z","level":"info","event":"       UPDATE  id=1","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.238123Z","level":"info","event":"       UPDATE  id=2","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.238822Z","level":"info","event":"       UPDATE  id=3","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.240502Z","level":"info","event":"       UPDATE  id=4","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.241641Z","level":"info","event":"       UPDATE  id=5","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.242352Z","level":"info","event":"       UPDATE  id=6","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.243174Z","level":"info","event":"       UPDATE  id=7","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.243761Z","level":"info","event":"       UPDATE  id=8","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.245344Z","level":"info","event":"       UPDATE  id=9","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.246875Z","level":"info","event":"       UPDATE  id=10","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.247680Z","level":"info","event":"       UPDATE  id=11","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.248529Z","level":"info","event":"       UPDATE  id=12","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.249562Z","level":"info","event":"       UPDATE  id=13","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.250233Z","level":"info","event":"       UPDATE  id=14","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.251091Z","level":"info","event":"       UPDATE  id=15","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.251548Z","level":"info","event":"       UPDATE  id=16","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.252124Z","level":"info","event":"       UPDATE  id=17","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.252750Z","level":"info","event":"       UPDATE  id=18","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.253155Z","level":"info","event":"       UPDATE  id=19","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.253837Z","level":"info","event":"       UPDATE  id=20","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.254388Z","level":"info","event":"[INFO] result.csv updated — total 20 rows.","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.219370Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-11T16:46:30.973532Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.974269Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-11T16:46:30.975169Z","level":"info","event":"Task operator:<Task(PythonOperator): process_partition>","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.490250Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-11T17:17:08.492108Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/__pycache__/csv_upsert_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-11T17:17:08.505262Z","level":"warning","event":"airflow.exceptions.AirflowSkipException is deprecated and will be removed in a future version. Use airflow.sdk.exceptions.AirflowSkipException instead.","category":"UserWarning","filename":"/opt/airflow/dags/__pycache__/csv_upsert_pipeline.py","lineno":7,"logger":"py.warnings"}
+{"timestamp":"2026-05-11T17:17:08.553086Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.553648Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.554291Z","level":"info","event":"Current task name:process_partition","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.554743Z","level":"info","event":"Dag name:csv_upsert_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.558909Z","level":"info","event":"[INFO] data_interval_start : 2026-05-01 04:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.559674Z","level":"info","event":"[INFO] data_interval_end   : 2026-05-01 04:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.560686Z","level":"info","event":"[INFO] Processing partition: /data/time_stamp=2026-05-01-04","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.561796Z","level":"info","event":"[INFO] Sorted files: ['data_1.csv', 'data_2.csv', 'data_3.csv', 'data_4.csv']","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.565181Z","level":"info","event":"[INFO] Read data_1.csv  (index=1)","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.567964Z","level":"info","event":"[INFO] Read data_2.csv  (index=2)","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.569337Z","level":"info","event":"[INFO] Read data_3.csv  (index=3)","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.571049Z","level":"info","event":"[INFO] Read data_4.csv  (index=4)","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.571760Z","level":"info","event":"[INFO] Resolved 20 unique IDs for this run:","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.572312Z","level":"info","event":"       id=1 → {'id': '1', 'name': 'Frank', 'age': '44', 'department': 'Engineering', 'salary': '76344.63', 'working_hours': '44.4'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.575146Z","level":"info","event":"       id=2 → {'id': '2', 'name': 'Jack', 'age': '25', 'department': 'HR', 'salary': '32754.62', 'working_hours': '26.8'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.576239Z","level":"info","event":"       id=3 → {'id': '3', 'name': 'Grace', 'age': '33', 'department': 'Operations', 'salary': '98928.69', 'working_hours': '59.7'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.576754Z","level":"info","event":"       id=4 → {'id': '4', 'name': 'Charlie', 'age': '29', 'department': 'HR', 'salary': '108000.27', 'working_hours': '26.5'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.577858Z","level":"info","event":"       id=5 → {'id': '5', 'name': 'Charlie', 'age': '60', 'department': 'Engineering', 'salary': '32832.81', 'working_hours': '28.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.578376Z","level":"info","event":"       id=6 → {'id': '6', 'name': 'Grace', 'age': '45', 'department': 'HR', 'salary': '39119.9', 'working_hours': '45.2'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.581189Z","level":"info","event":"       id=7 → {'id': '7', 'name': 'Jack', 'age': '47', 'department': 'Finance', 'salary': '44217.17', 'working_hours': '50.9'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.581806Z","level":"info","event":"       id=8 → {'id': '8', 'name': 'Ivy', 'age': '24', 'department': 'Engineering', 'salary': '71763.21', 'working_hours': '25.0'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.582826Z","level":"info","event":"       id=9 → {'id': '9', 'name': 'Hank', 'age': '60', 'department': 'Sales', 'salary': '90722.99', 'working_hours': '34.6'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.583345Z","level":"info","event":"       id=10 → {'id': '10', 'name': 'Diana', 'age': '39', 'department': 'Operations', 'salary': '87284.9', 'working_hours': '42.0'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.585717Z","level":"info","event":"       id=11 → {'id': '11', 'name': 'Grace', 'age': '30', 'department': 'Finance', 'salary': '34935.6', 'working_hours': '43.7'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.586279Z","level":"info","event":"       id=12 → {'id': '12', 'name': 'Jack', 'age': '22', 'department': 'Operations', 'salary': '30985.93', 'working_hours': '53.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.587721Z","level":"info","event":"       id=13 → {'id': '13', 'name': 'Hank', 'age': '44', 'department': 'HR', 'salary': '42675.15', 'working_hours': '59.8'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.588927Z","level":"info","event":"       id=14 → {'id': '14', 'name': 'Hank', 'age': '28', 'department': 'Marketing', 'salary': '109878.48', 'working_hours': '34.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.589418Z","level":"info","event":"       id=15 → {'id': '15', 'name': 'Diana', 'age': '23', 'department': 'Operations', 'salary': '60575.39', 'working_hours': '44.2'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.591248Z","level":"info","event":"       id=16 → {'id': '16', 'name': 'Hank', 'age': '25', 'department': 'Marketing', 'salary': '59289.03', 'working_hours': '21.5'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.591913Z","level":"info","event":"       id=17 → {'id': '17', 'name': 'Charlie', 'age': '30', 'department': 'HR', 'salary': '42340.51', 'working_hours': '27.1'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.592828Z","level":"info","event":"       id=18 → {'id': '18', 'name': 'Hank', 'age': '57', 'department': 'Sales', 'salary': '118911.5', 'working_hours': '53.9'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.594678Z","level":"info","event":"       id=19 → {'id': '19', 'name': 'Eve', 'age': '58', 'department': 'Engineering', 'salary': '100434.58', 'working_hours': '47.5'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.595397Z","level":"info","event":"       id=20 → {'id': '20', 'name': 'Hank', 'age': '55', 'department': 'Engineering', 'salary': '84460.43', 'working_hours': '26.2'}","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.596174Z","level":"info","event":"[INFO] result.csv found — upsert.","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.596681Z","level":"info","event":"[INFO] In existing result.csv 19 rows.","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.597125Z","level":"info","event":"       UPDATE  id=1","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.597623Z","level":"info","event":"       UPDATE  id=2","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.598067Z","level":"info","event":"       UPDATE  id=3","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.598607Z","level":"info","event":"       UPDATE  id=4","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.599033Z","level":"info","event":"       UPDATE  id=5","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.599509Z","level":"info","event":"       UPDATE  id=6","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.600360Z","level":"info","event":"       UPDATE  id=7","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.600996Z","level":"info","event":"       UPDATE  id=8","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.601452Z","level":"info","event":"       UPDATE  id=9","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.601886Z","level":"info","event":"       UPDATE  id=10","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.602351Z","level":"info","event":"       UPDATE  id=11","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.602882Z","level":"info","event":"       UPDATE  id=12","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.603327Z","level":"info","event":"       UPDATE  id=13","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.604605Z","level":"info","event":"       UPDATE  id=14","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.605112Z","level":"info","event":"       UPDATE  id=15","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.605554Z","level":"info","event":"       UPDATE  id=16","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.606101Z","level":"info","event":"       UPDATE  id=17","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.606575Z","level":"info","event":"       UPDATE  id=18","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.608128Z","level":"info","event":"       UPDATE  id=19","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.608715Z","level":"info","event":"       INSERT  id=20","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.609503Z","level":"info","event":"[INFO] result.csv updated — total 20 rows.","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.576373Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-11T17:17:08.645308Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.646076Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-11T17:17:08.646616Z","level":"info","event":"Task operator:<Task(PythonOperator): process_partition>","logger":"task.stdout"}

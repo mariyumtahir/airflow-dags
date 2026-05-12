@@ -1,0 +1,13 @@
+id,name,age,department,salary,working_hours
+1,Frank,30,Sales,59448.65,23.2
+2,Diana,29,Finance,108315.86,53.0
+3,Grace,52,Finance,86203.47,53.0
+4,Diana,29,Finance,117024.04,44.6
+5,Alice,37,Marketing,101877.04,58.2
+6,Eve,41,Engineering,108194.58,29.3
+7,Jack,37,Engineering,32333.26,31.2
+8,Bob,59,Marketing,82844.98,57.2
+9,Hank,36,Sales,73983.54,55.6
+10,Frank,46,HR,32451.68,25.3
+11,Jack,56,Operations,55284.78,48.2
+12,Hank,32,Engineering,84615.06,37.8

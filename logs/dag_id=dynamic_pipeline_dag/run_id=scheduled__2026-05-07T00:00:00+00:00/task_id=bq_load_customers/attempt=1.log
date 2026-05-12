@@ -1,0 +1,13 @@
+{"timestamp":"2026-05-07T02:12:14.355829Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-07T02:12:14.357915Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-07T02:12:14.473786Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:14.474310Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:14.475207Z","level":"info","event":"Current task name:bq_load_customers","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:14.476798Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:14.478956Z","level":"info","event":"Loading data to BigQuery: processed.customer_profile","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:14.480696Z","level":"info","event":"Query: SELECT * FROM `raw.customer_data`","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:14.481318Z","level":"info","event":"Load complete: customers → processed.customer_profile","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:14.478911Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-07T02:12:14.553297Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:14.556912Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:14.557823Z","level":"info","event":"Task operator:<Task(PythonOperator): bq_load_customers>","logger":"task.stdout"}

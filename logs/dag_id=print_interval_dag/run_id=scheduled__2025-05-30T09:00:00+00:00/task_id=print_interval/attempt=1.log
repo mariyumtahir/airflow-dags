@@ -1,0 +1,55 @@
+{"timestamp":"2026-05-05T10:31:10.424749Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-05T10:31:10.426961Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/print_interval_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-05T10:31:10.443909Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"UserWarning","filename":"/opt/airflow/dags/print_interval_dag.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-05-05T10:31:10.547667Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:31:10.551359Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:31:10.555661Z","level":"info","event":"Current task name:print_interval","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:31:10.556330Z","level":"info","event":"Dag name:print_interval_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:31:10.557365Z","level":"info","event":"Interval Start: 2025-05-30 09:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:31:10.558651Z","level":"info","event":"Interval End:   2025-05-30 09:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:31:10.552426Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-05T10:31:10.664768Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:31:10.667058Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-05T10:31:10.669587Z","level":"info","event":"Task operator:<Task(PythonOperator): print_interval>","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.348663Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-05T12:27:08.350887Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/print_interval_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-05T12:27:08.460289Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.460959Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.463100Z","level":"info","event":"Current task name:print_interval","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.463799Z","level":"info","event":"Dag name:print_interval_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.466435Z","level":"info","event":"=== ALL AVAILABLE MACROS ===","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.467181Z","level":"info","event":"dag: <DAG: print_interval_dag>","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.468434Z","level":"info","event":"inlets: []","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.469016Z","level":"info","event":"map_index_template: None","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.469863Z","level":"info","event":"outlets: []","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.470449Z","level":"info","event":"run_id: scheduled__2025-05-30T09:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.470884Z","level":"info","event":"task: <Task(PythonOperator): print_interval>","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.472115Z","level":"info","event":"task_instance: id=UUID('019df81b-38ef-7ca2-bc97-33169c373d81') task_id='print_interval' dag_id='print_interval_dag' run_id='scheduled__2025-05-30T09:00:00+00:00' try_number=1 dag_version_id=UUID('019df815-a045-750b-bac8-47ced7cc6a45') map_index=-1 hostname='86abe326db93' context_carrier={'traceparent': '00-eb5d0f6782a6c8cb9ea3c781d15e3471-3157af76d34aae66-01'} task=<Task(PythonOperator): print_interval> bundle_instance=LocalDagBundle(name=dags-folder) max_tries=0 start_date=datetime.datetime(2026, 5, 5, 12, 27, 7, 364730, tzinfo=datetime.timezone.utc) end_date=None state=<TaskInstanceState.RUNNING: 'running'> is_mapped=False rendered_map_index=None sentry_integration=''","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.472942Z","level":"info","event":"ti: id=UUID('019df81b-38ef-7ca2-bc97-33169c373d81') task_id='print_interval' dag_id='print_interval_dag' run_id='scheduled__2025-05-30T09:00:00+00:00' try_number=1 dag_version_id=UUID('019df815-a045-750b-bac8-47ced7cc6a45') map_index=-1 hostname='86abe326db93' context_carrier={'traceparent': '00-eb5d0f6782a6c8cb9ea3c781d15e3471-3157af76d34aae66-01'} task=<Task(PythonOperator): print_interval> bundle_instance=LocalDagBundle(name=dags-folder) max_tries=0 start_date=datetime.datetime(2026, 5, 5, 12, 27, 7, 364730, tzinfo=datetime.timezone.utc) end_date=None state=<TaskInstanceState.RUNNING: 'running'> is_mapped=False rendered_map_index=None sentry_integration=''","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.473402Z","level":"info","event":"outlet_events: OutletEventAccessors(_dict={})","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.473894Z","level":"info","event":"inlet_events: InletEventsAccessors(_inlets=[], _assets={}, _asset_aliases={})","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.474334Z","level":"info","event":"macros: <MacrosAccessor (dynamic access to macros)>","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.474742Z","level":"info","event":"params: {}","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.475099Z","level":"info","event":"var: {'json': <VariableAccessor (dynamic access)>, 'value': <VariableAccessor (dynamic access)>}","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.475448Z","level":"info","event":"conn: <ConnectionAccessor (dynamic access)>","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.475848Z","level":"info","event":"dag_run: dag_id='print_interval_dag' run_id='scheduled__2025-05-30T09:00:00+00:00' logical_date=datetime.datetime(2025, 5, 30, 9, 0, tzinfo=datetime.timezone.utc) data_interval_start=datetime.datetime(2025, 5, 30, 9, 0, tzinfo=datetime.timezone.utc) data_interval_end=datetime.datetime(2025, 5, 30, 9, 0, tzinfo=datetime.timezone.utc) run_after=datetime.datetime(2025, 5, 30, 9, 0, tzinfo=datetime.timezone.utc) start_date=datetime.datetime(2026, 5, 5, 12, 27, 6, 894073, tzinfo=datetime.timezone.utc) end_date=None clear_number=0 run_type=<DagRunType.SCHEDULED: 'scheduled'> state=<DagRunState.RUNNING: 'running'> conf={} triggering_user_name=None consumed_asset_events=[] partition_key=None note=None","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.476171Z","level":"info","event":"triggering_asset_events: TriggeringAssetEventAccessor(_events=defaultdict(<class 'list'>, {}))","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.476572Z","level":"info","event":"task_instance_key_str: print_interval_dag__print_interval__20250530","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.477013Z","level":"info","event":"task_reschedule_count: 0","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.513769Z","level":"info","event":"prev_start_date_success: 2026-05-05 12:27:05.940884+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.514888Z","level":"info","event":"prev_end_date_success: 2026-05-05 12:27:08.105585+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.515852Z","level":"info","event":"logical_date: 2025-05-30 09:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.517120Z","level":"info","event":"ds: 2025-05-30","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.517950Z","level":"info","event":"ds_nodash: 20250530","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.521530Z","level":"info","event":"ts: 2025-05-30T09:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.525023Z","level":"info","event":"ts_nodash: 20250530T090000","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.525573Z","level":"info","event":"ts_nodash_with_tz: 20250530T090000+0000","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.528035Z","level":"info","event":"data_interval_end: 2025-05-30 09:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.529903Z","level":"info","event":"data_interval_start: 2025-05-30 09:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.532399Z","level":"info","event":"prev_data_interval_start_success: 2025-05-30 03:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.533205Z","level":"info","event":"prev_data_interval_end_success: 2025-05-30 03:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.533829Z","level":"info","event":"templates_dict: None","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.514189Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-05T12:27:08.617668Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.619034Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-05T12:27:08.619954Z","level":"info","event":"Task operator:<Task(PythonOperator): print_interval>","logger":"task.stdout"}

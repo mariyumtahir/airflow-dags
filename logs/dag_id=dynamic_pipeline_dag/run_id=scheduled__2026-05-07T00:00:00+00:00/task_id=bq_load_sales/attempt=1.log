@@ -1,0 +1,16 @@
+{"timestamp":"2026-05-07T02:12:15.976588Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-07T02:12:15.978644Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dynamic_dag_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-07T02:12:16.083206Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.083942Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.084586Z","level":"info","event":"Current task name:bq_load_sales","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.085094Z","level":"info","event":"Dag name:dynamic_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.088992Z","level":"info","event":"Loading data to BigQuery: processed.sales_summary","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.089520Z","level":"info","event":"Query:","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.089946Z","level":"info","event":"            SELECT * FROM `raw.sales_data`","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.090752Z","level":"info","event":"            WHERE sale_date = '{{ ds }}'","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.093179Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.094421Z","level":"info","event":"Load complete: sales → processed.sales_summary","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.088978Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-07T02:12:16.135177Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.135763Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-07T02:12:16.136686Z","level":"info","event":"Task operator:<Task(PythonOperator): bq_load_sales>","logger":"task.stdout"}
