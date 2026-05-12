@@ -1,26 +1,27 @@
 import os
-import csv
+os.environ["JAVA_HOME"] = "/usr/local/Cellar/openjdk@11/11.0.30/libexec/openjdk.jdk/Contents/Home"
 from datetime import datetime
-
 from airflow import DAG
 from airflow.providers.standard.operators.python import PythonOperator
-from airflow.exceptions import AirflowSkipException
-from croniter import croniter
+from airflow.sdk.exceptions import AirflowSkipException
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, row_number, regexp_extract, input_file_name
+from pyspark.sql.window import Window
+from pyspark.sql.types import StructType, StructField, StringType
 
 # VARIABLES
 
-DATA_DIR   = "/data"
-OUTPUT_DIR = "/output"
-OUTPUT_CSV = "/output/result.csv"
+DATA_DIR   = "/Users/mtq/airflow-docker/data"
+OUTPUT_DIR = "/Users/mtq/airflow-docker/output"
+OUTPUT_CSV = "/Users/mtq/airflow-docker/output/result.csv"
 
 COLUMNS = ["id", "name", "age", "department", "salary", "working_hours"]
-
 
 # MAIN FUNCTION
 
 def process_partition(**context):
-    
-    # === TASK 2: LOGICAL INTERVAL ===
+
+    # === STEP 1: LOGICAL INTERVAL ===
 
     data_interval_start = context["data_interval_start"]
     data_interval_end   = context["data_interval_end"]
@@ -28,126 +29,123 @@ def process_partition(**context):
     print(f"[INFO] data_interval_start : {data_interval_start}")
     print(f"[INFO] data_interval_end   : {data_interval_end}")
 
-    # FOLDER NAME FORMAT: YYYY-MM-DD-HH 
-
     folder_name    = data_interval_start.strftime("%Y-%m-%d-%H")
     partition_path = f"{DATA_DIR}/time_stamp={folder_name}"
 
     print(f"[INFO] Processing partition: {partition_path}")
 
-    
+    # === STEP 2: FOLDER CHECK ===
 
-    # === TASK 3: READ All CSVs ===
-    
     if not os.path.isdir(partition_path):
         raise AirflowSkipException(f"Folder don't exist: {partition_path}")
 
+    # === STEP 3: SPARK SESSION ===
 
-    # ONLY CSV FILES
-    all_files = [f for f in os.listdir(partition_path) if f.endswith(".csv")]
+    spark = SparkSession.builder \
+        .master("local[2]") \
+        .appName("csv_upsert_pipeline") \
+        .config("spark.driver.memory", "512m") \
+        .config("spark.executor.memory", "512m") \
+        .config("spark.sql.shuffle.partitions", "2") \
+        .getOrCreate()
 
-    if not all_files:
-        raise FileNotFoundError(f"CSV not found in: {partition_path}")
+    # === STEP 4: READ ALL CSVs ===
 
-    # SORTING NUMERICALLY
+    df_new = spark.read.csv(
+        partition_path,
+        header=True,
+        inferSchema=True
+    )
 
-    def extract_file_index(filename):
-        base = filename.replace(".csv", "")
-        return int(base.split("_")[1])
+    print(f"[INFO] Total rows read: {df_new.count()}")
 
-    sorted_files = sorted(all_files, key=extract_file_index)
-    print(f"[INFO] Sorted files: {sorted_files}")
+    # === STEP 5: FILE INDEX COLUMN ADD KARO ===
 
-    all_rows = []
+    df_new = df_new.withColumn(
+        "file_index",
+        regexp_extract(input_file_name(), r"file_(\d+)\.csv", 1).cast("int")
+    )
 
-    for filename in sorted_files:
-        file_index = extract_file_index(filename)
-        filepath   = os.path.join(partition_path, filename)
+    # === STEP 6: LATEST RECORD PER ID ===
 
-        with open(filepath, newline="", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                all_rows.append((file_index, row))
+    window = Window.partitionBy("id").orderBy(col("file_index").desc())
 
-        print(f"[INFO] Read {filename}  (index={file_index})")
+    df_resolved = df_new \
+        .withColumn("rank", row_number().over(window)) \
+        .filter(col("rank") == 1) \
+        .drop("rank", "file_index")
 
-    # === TASK 4: RESOLVE LATEST RECORD PER ID ===
+    print(f"[INFO] Resolved {df_resolved.count()} unique IDs.")
 
-    latest_records = {}
+    # === STEP 7: UPSERT ===
 
-    for file_index, row in all_rows:
-        record_id = row["id"]
+    os.makedirs(os.path.dirname(OUTPUT_CSV), exist_ok=True)
 
-        if record_id not in latest_records:
-            latest_records[record_id] = (file_index, row)
-        else:
-            existing_index, _ = latest_records[record_id]
-            if file_index > existing_index:
-                latest_records[record_id] = (file_index, row)
+    if not os.path.isdir(OUTPUT_CSV):
 
-    resolved = {id: row_dict for id, (file_index, row_dict) in latest_records.items()}
-
-    print(f"[INFO] Resolved {len(resolved)} unique IDs for this run:")
-    for id, row in resolved.items():
-        print(f"       id={id} → {row}")
-
-    # === TASK 5: UPSERT INTO result.csv ===
-    os.makedirs(OUTPUT_DIR, exist_ok=True)  
-
-    if not os.path.isfile(OUTPUT_CSV):
         # FIRST RUN
         print("[INFO] result.csv not found — create new.")
 
-        with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=COLUMNS)
-            writer.writeheader()
-            writer.writerows(resolved.values())
+        df_resolved \
+            .coalesce(1) \
+            .write.csv(OUTPUT_CSV, header=True, mode="overwrite")
 
-        print(f"[INFO] result.csv create with {len(resolved)} rows.")
+        print(f"[INFO] result.csv created with {df_resolved.count()} rows.")
 
     else:
+
         # SUBSEQUENT RUNS
         print("[INFO] result.csv found — upsert.")
 
-        # READ EXISTING ROWS
-        existing = {}
-        with open(OUTPUT_CSV, newline="", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                existing[row["id"]] = row
+        SCHEMA = StructType([
+            StructField("id", StringType()),
+            StructField("name", StringType()),
+            StructField("age", StringType()),
+            StructField("department", StringType()),
+            StructField("salary", StringType()),
+            StructField("working_hours", StringType()),
+        ])
+        
+        df_existing = spark.read.csv(
+            OUTPUT_CSV,
+            header=True,
+            inferSchema=True,
+            schema=SCHEMA,
+        )
 
-        print(f"[INFO] In existing result.csv {len(existing)} rows.")
+        print(f"[INFO] Existing rows: {df_existing.count()}")
 
-       
-        for id, row in resolved.items():
-            if id in existing:
-                print(f"       UPDATE  id={id}")
-            else:
-                print(f"       INSERT  id={id}")
-            existing[id] = row 
+        # EXISTING MEIN SE NEW IDs HATA DO
+        df_existing_filtered = df_existing.join(
+            df_resolved.select("id"),
+            on="id",
+            how="left_anti"
+        )
 
-        with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=COLUMNS)
-            writer.writeheader()
-            writer.writerows(existing.values())
+        # DONO MERGE KARO
+        df_final = df_existing_filtered.union(df_resolved)
 
-        print(f"[INFO] result.csv updated — total {len(existing)} rows.")
+        df_final \
+            .coalesce(1) \
+            .write.csv(OUTPUT_CSV, header=True, mode="overwrite")
+
+        print(f"[INFO] result.csv updated — total {df_final.count()} rows.")
+
+    spark.stop()
 
 
-# === TASK 1: DAG DEFINITION ===
+# === DAG DEFINITION ===
 
 with DAG(
-    dag_id = "csv_upsert_pipeline",
+    dag_id     = "csv_upsert_pipeline",
     start_date = datetime(2026, 5, 1, 0, 0, 0),
-    end_date = datetime(2026, 5, 6, 23),
-    schedule = "@hourly",
-    catchup = True,    
-    tags = ["csv", "upsert", "incremental"],
+    end_date   = datetime(2026, 5, 1, 4, 0, 0),
+    schedule   = "@hourly",
+    catchup    = True,
+    tags       = ["csv", "upsert", "incremental"],
 ) as dag:
 
     process_task = PythonOperator(
         task_id         = "process_partition",
         python_callable = process_partition,
     )
-    
-    process_task
